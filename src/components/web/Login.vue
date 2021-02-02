@@ -1,6 +1,6 @@
 <template>
     <div id="login" class="row">
-        <div class="col col-12 col-sm-12 col-md-4 mx-auto mt-5">
+        <div class="col col-12 col-sm-6 col-md-4 mx-auto mt-5 p-5">
             <form name="login" action="#" @submit.prevent="login" class="w-100">
                 <label class="font-weight-500">Email</label>
                 <input v-model="email" type="email" name="login" required class="form-control mb-1">
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+
+    import axios from 'axios'
 
     export default {
         name: 'Login',
@@ -42,13 +44,12 @@
 
             login()
             {
-                fetch('http://localhost:8000/api/login')
-                .then(response => {
+                const requestData = []
+
+                axios.post('http://localhost:8000/api/login', requestData).then(response => {
                     console.log(response)
                 })
-                .catch(error => {
-                    console.log(error)
-                })
+                .catch(error => console.log(error))
             }
         }
     }
