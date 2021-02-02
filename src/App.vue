@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <button class="btn btn-primary">example</button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
   export default {
     name: 'App',
   }
+
 </script>
 
 <style>
