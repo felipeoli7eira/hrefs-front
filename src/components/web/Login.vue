@@ -44,7 +44,10 @@
 
             login()
             {
-                const requestData = []
+                const requestData = {
+                    email: this.email,
+                    password: this.password
+                }
 
                 axios.post('http://localhost:8000/api/login', requestData).then(response => {
                     console.log(response)
