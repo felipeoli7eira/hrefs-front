@@ -3,6 +3,7 @@ import App from './App.vue'
 import 'mdb-ui-kit/css/mdb.min.css'
 import '@/assets/css/app.css'
 import router from '@/config/router'
+import '@/config/http'
 
 Vue.config.productionTip = false
 

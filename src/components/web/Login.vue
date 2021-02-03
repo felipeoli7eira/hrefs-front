@@ -18,8 +18,6 @@
 
 <script>
 
-    import axios from 'axios'
-
     export default {
         name: 'Login',
 
@@ -49,7 +47,7 @@
                     password: this.password
                 }
 
-                axios.post('http://localhost:8000/api/login', requestData).then(response => {
+                this.$http.post('/login', requestData).then(response => {
                     console.log(response)
                 })
                 .catch(error => console.log(error))
