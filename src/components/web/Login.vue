@@ -95,6 +95,10 @@
                         {
                             this.ui.note.primary = true
                             this.request.message = 'Redirecionando...'
+
+                            sessionStorage.setItem('t_a_hrefs', true)
+                            this.$router.push({name: 'app.home'})
+
                         }
                     })
                     .catch(error => {
