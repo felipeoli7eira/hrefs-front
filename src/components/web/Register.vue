@@ -92,7 +92,7 @@
                 {
                     this.request.sending = true
 
-                    this.$http.post('/login', {email: this.user.email, password: this.user.password})
+                    this.$http.post('/user', {email: this.user.email, password: this.user.password})
                     .then(response => {
 
                         this.request.sending = false
@@ -106,10 +106,7 @@
                         {
                             this.ui.note.primary = true
                             this.request.message = 'Redirecionando...'
-
-                            sessionStorage.setItem('t_a_hrefs', true)
-                            this.$router.push({name: 'app.home'})
-
+                            this.$router.push({name: 'web.login'})
                         }
                     })
                     .catch(error => {
