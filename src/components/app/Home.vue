@@ -15,6 +15,7 @@
 
             logout()
             {
+                sessionStorage.removeItem('t_a_hrefs')
                 this.$router.push({ name: 'web.login' })
             }
         }

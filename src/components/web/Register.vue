@@ -1,7 +1,18 @@
 <template>
-    <div id="login" class="row">
-        <div class="col col-12 col-sm-6 col-md-4 mx-auto mt-5 p-5">
-            <form name="login-form" action="#" @submit.prevent="login" class="w-100">
+    <div id="register" class="row m-0">
+        <div class="row m-0">
+            <div class="col col-12 col-sm-8 col-md-8 mx-auto mt-5 text-center">
+                <h2 class="h2 h2-responsive font-weight-300 text-black-50">
+                    Bem vindo ao <span class="font-weight-500 text-black">Hrefs</span>
+                </h2>
+
+                <p class="font-weight-300">Aqui você reúne todos os links referentes ao seu perfil profissional em um único lugar!</p>
+
+                <p class="font-weight-400">Vamos começar com um cadastro básico</p>
+            </div>
+        </div>
+        <div class="col col-12 col-sm-6 col-md-4 mx-auto p-5">
+            <form name="register-form" action="#" @submit.prevent="register" class="w-100">
 
                 <p
                     class="note font-weight-500 override-note"
@@ -27,7 +38,7 @@
                 </div>
 
                 <nav class="text-center mt-5">
-                    Não tem conta? <router-link to="/cadastro">cadastre-se</router-link>
+                    Já tem conta? <router-link to="/login">entre</router-link>
                 </nav>
             </form>
         </div>
@@ -37,7 +48,7 @@
 <script>
 
     export default {
-        name: 'Login',
+        name: 'Register',
 
         data()
         {
@@ -55,7 +66,7 @@
                         text: ''
                     },
 
-                    submitText: 'login'
+                    submitText: 'cadastrar'
                 },
 
                 request: {
@@ -75,7 +86,7 @@
 
         methods: {
 
-            login()
+            register()
             {
                 try
                 {

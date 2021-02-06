@@ -5,6 +5,7 @@ Vue.use(Router)
 
 // web (public) components
 import Login from '@/components/web/Login'
+import Register from '@/components/web/Register'
 import Home from '@/components/web/Home'
 
 // app (auth) components
@@ -27,6 +28,11 @@ export default new Router(
                 path: '/login',
                 component: Login,
                 name: 'web.login'
+            },
+            {
+                path: '/cadastro',
+                component: Register,
+                name: 'web.register'
             },
 
             /* app ------------------------------ */
