@@ -1,6 +1,6 @@
 <template>
     <div id="app-home">
-        <h1>App</h1>
+        <NavBar />
 
         <button @click="logout">logout</button>
     </div>
@@ -8,8 +8,12 @@
 
 <script>
 
+    import NavBar from '@/components/app/Navbar'
+
     export default {
         name: 'Home',
+
+        components: { NavBar },
 
         methods: {
 

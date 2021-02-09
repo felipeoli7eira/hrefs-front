@@ -6,9 +6,9 @@ Vue.use(Router)
 // web (public) components
 import Login from '@/components/web/Login'
 import Register from '@/components/web/Register'
-import Home from '@/components/web/Home'
+import WebHome from '@/components/web/Home'
 
-// app (auth) components
+// app (private) components
 import AppHome from '@/components/app/Home'
 
 // Routes
@@ -21,7 +21,7 @@ export default new Router(
 
             {
                 path: '/',
-                component: Home,
+                component: WebHome,
                 name: 'web.home'
             },
             {
@@ -46,7 +46,7 @@ export default new Router(
 
                     if (!sessionStorage.getItem('t_a_hrefs'))
                     {
-                        next('/login')
+                        next({ name: 'web.login' })
                     }
                     else
                     {

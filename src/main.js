@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import 'mdb-ui-kit/css/mdb.min.css'
+
+/* css */
+import 'mdb-ui-kit/css/mdb.min.css' /* material design for bootstrap */
 import '@/assets/css/app.css'
-import router from '@/config/router'
-import '@/config/http'
+
+/* configs */
+import router from '@/config/router' /* vue-router */
+import '@/config/http' /* axios */
 
 Vue.config.productionTip = false
 
